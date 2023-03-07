@@ -146,46 +146,10 @@
 
         <aside class="sidebar">
             <p class="cont" id="contenido"></p>
-            <script>
-                fetch('https://randomuser.me/api')
-                    .then(data => data.json())
-                    .then(data => {
-                        console.log(data)
-                        contenido.innerHTML = `${data}`
-                        console.log(data.results['0'])
-                        contenido.innerHTML = `
-                        <img src = "${data.results['0'].picture.large}" class="rounded-circle" alt="circle"/> 
-                        <br><br>                
-                        <p class="genero">Género: ${data.results['0'].gender}</p>
-                        <p>Fecha de Nacimiento</p>
-                        <p class="fecha_de_nacimiento"> ${data.results['0'].dob.date}</p>
-                        <p class="edad">Edad: ${data.results['0'].dob.age}</p>
-                        <br>
-                        <h3 id="contacto">Contacto</h3> 
-                        <br>
-                        <span class="calle">Calle: ${data.results['0'].location.street.name}</span>
-                        <span class="numero"> ${data.results['0'].location.street.number}</span>
-                        <p class="ciudad">Ciudad: ${data.results['0'].location.city}</p>
-                        <p class="estado">Estado: ${data.results['0'].location.state}</p>
-                        <p class="pais">País: ${data.results['0'].location.country}</p>
-                        <p class="codigo_postal">Código Postal: ${data.results['0'].location.postcode}</p> 
-                        
+         
 
-                        <span href="contacto.html" class="contacto" target="_blank" rel="noopener"></span>
-                        <span><i class="contacto fa-regular fa-envelope contacto"></i></span>
-                        <span class="email"> ${data.results['0'].email}</span>
 
-                       <br>
-                        <span href="#" class="telefono" target="_blank" rel="noopener">
-                        <i class="fa-solid fa-phone"></i></span>
-                        <span class="tel"> ${data.results['0'].phone}</span>
-                        <br>
-                        <span href="https://www.whatsapp.com" class="whatsapp" target="_blank" rel="noopener">
-                        <i class="whatsapp fa-brands fa-whatsapp"></i></span>
-                        <span class="celular"> ${data.results['0'].cell}</span>
-                     `
-                    })
-            </script>
+            
             <br>
             <h3 id="habilidades">Habilidades</h3>
             <div class="skills">
